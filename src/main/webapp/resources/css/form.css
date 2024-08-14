@@ -1,0 +1,317 @@
+html, body {
+    height: 100%; /* Убедитесь, что html и body занимают всю высоту */
+    margin: 0; /* Убираем стандартные отступы */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    box-sizing: border-box;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none; /* Убирает подчеркивание ссылки */
+}
+
+header h1 a:hover,
+header h1 a:active,
+header h1 a:focus {
+    color: white; /* Сохраняет белый цвет при наведении, нажатии и фокусе */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/strike.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #800080;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Позволяет body занимать всю высоту экрана */
+    position: relative; /* Нужно для абсолютного позиционирования дочерних элементов */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #515151;
+    padding: 10px;
+    overflow: hidden;
+    }
+
+nav ul {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px; /* Расстояние между элементами слева и справа */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00FF00;
+}
+
+nav ul li a:hover {
+    color: #800080;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    color: #fff;
+    flex: 1; /* Позволяет контейнеру занимать оставшееся пространство */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Позволяет футеру быть прижатым к низу */
+    width: 100%; /* Убедитесь, что футер занимает всю ширину */
+}
+
+footer a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #800080;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons form {
+    margin: 0;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+.login-form {
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для формы */
+    padding: 20px;
+    border-radius: 8px; /* Скругление углов формы */
+    max-width: 400px; /* Ширина формы */
+    width: 100%; /* Устанавливаем ширину формы как 100% */
+    color: #fff; /* Цвет текста внутри формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг формы */
+    box-sizing: border-box; /* Учитывать отступы и границы в ширине элемента */
+    text-align: center; /* Центрирование текста внутри формы */
+    
+    /* Абсолютное позиционирование для центрирования */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по горизонтали и вертикали */
+}
+.login-form form {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение элементов */
+    gap: 10px; /* Расстояние между строками формы */
+}
+
+.login-form label {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+    margin-left: 5px; /* Отступ между меткой и полем ввода */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    
+}
+
+.submit-button {
+    background-color: #00FF00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #800080;
+}
+.reg-form {
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для формы */
+    padding: 20px;
+    border-radius: 8px; /* Скругление углов формы */
+    max-width: 400px; /* Ширина формы */
+    width: 100%; /* Устанавливаем ширину формы как 100% */
+    color: #fff; /* Цвет текста внутри формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг формы */
+    box-sizing: border-box; /* Учитывать отступы и границы в ширине элемента */
+    text-align: center; /* Центрирование текста внутри формы */
+    
+    /* Абсолютное позиционирование для центрирования */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по горизонтали и вертикали */
+}
+.reg-form form {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение элементов */
+    gap: 10px; /* Расстояние между строками формы */
+}
+
+.reg-form label {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.reg-form input[type="text"], 
+.reg-form input[type="password"] {
+    margin-left: 5px; /* Отступ между меткой и полем ввода */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    
+}
+.edit-form {
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для формы */
+    padding: 20px;
+    border-radius: 8px; /* Скругление углов формы */
+    max-width: 1000px; /* Ширина формы */
+    width: 100%; /* Устанавливаем ширину формы как 100% */
+    color: #fff; /* Цвет текста внутри формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг формы */
+    box-sizing: border-box; /* Учитывать отступы и границы в ширине элемента */
+    text-align: center; /* Центрирование текста внутри формы */
+    
+    /* Абсолютное позиционирование для центрирования */
+    position: absolute;
+    top: 54.5%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по горизонтали и вертикали */
+}
+.edit-form form {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение элементов */
+    gap: 2px; /* Расстояние между строками формы */
+}
+
+.edit-form label {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.edit-form input[type="text"], 
+.edit-form input[type="number"], 
+.edit-form input[type="category"],  
+.edit-form input[type="password"] {
+    margin-left: 5px; /* Отступ между меткой и полем ввода */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    
+}
+
+.submit-button {
+    background-color: #00FF00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #800080;
+}
+.add-form {
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для формы */
+    padding: 20px;
+    border-radius: 8px; /* Скругление углов формы */
+    max-width: 1000px; /* Ширина формы */
+    width: 100%; /* Устанавливаем ширину формы как 100% */
+    color: #fff; /* Цвет текста внутри формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг формы */
+    box-sizing: border-box; /* Учитывать отступы и границы в ширине элемента */
+    text-align: center; /* Центрирование текста внутри формы */
+    
+    /* Абсолютное позиционирование для центрирования */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по горизонтали и вертикали */
+}
+.add-form form {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение элементов */
+    gap: 1px; /* Расстояние между строками формы */
+}
+
+.add-form label {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+.add-form input[type="text"], 
+.add-form input[type="number"], 
+.add-form input[type="category"],  
+.add-form input[type="password"] {
+    margin-left: 5px; /* Отступ между меткой и полем ввода */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    
+}
+
+.submit-button {
+    background-color: #00FF00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #800080;
+}
